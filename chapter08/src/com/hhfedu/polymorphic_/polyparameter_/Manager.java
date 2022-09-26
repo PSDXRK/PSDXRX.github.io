@@ -1,0 +1,26 @@
+package com.hhfedu.polymorphic_.polyparameter_;
+
+public class Manager extends Employee {
+    private double bonus;
+
+    public Manager(String name, double sarary, double bonus) {
+        super(name, sarary);
+        this.bonus = bonus;
+    }
+
+    public double getBonus() {
+        return bonus;
+    }
+
+    public void setBonus(double bonus) {
+        this.bonus = bonus;
+    }
+    public void manage() {
+        System.out.println("经理 " + getName() + " 正在管理员工...");
+    }
+
+    @Override
+    public double getAnnual() {
+        return super.getAnnual() + bonus;
+    }
+}
